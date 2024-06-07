@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FakeBook</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h2>Fakebook</h2>
+
+    <div class="topnav">
+      <a href="home.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="search.html">Search</a>
+    </div>
+
+    <div id="content">
+      <label class="label" for="mail">Part 1 </label>
+      <input type="email" id="mail" name="mail" />
+      <br />
+      <label class="label" for="pw">Part 2 </label>
+      <input type="text" id="pw" name="pw" />
+<br>
+      <input
+        class="submitbtn"
+        type="submit"
+        value="multiply"
+        onclick="multiplier()"
+      />
+      <input
+        class="submitbtn"
+        type="submit"
+        value="divide"
+        onclick="divider()"
+      />
+      <div id="output">Multiply</div>
+      <div id="output2">Divide</div>
+    </div>
+  </body>
+
+  <script>
+    function multiplier() {
+      const partOneInput = document.querySelector("input#mail"); //elements
+      const partTwoInput = document.querySelector("input#pw"); //elements
+
+      
+
+      const partOne = partOneInput.value; //strings
+      const partTwo = partTwoInput.value; //strings
+
+      const partsMultiplied = partOne * partTwo;
+      
+
+      const outputElement = document.getElementById("output");
+      outputElement.innerText = partsMultiplied;
+
+      
+      
+    }
+    function divider() {
+      const partOneInput = document.querySelector("input#mail"); //elements
+      const partTwoInput = document.querySelector("input#pw"); //elements
+
+      
+
+      const partOne = partOneInput.value; //strings
+      const partTwo = partTwoInput.value; //strings
+
+      const partsDivided = partOne / partTwo;
+
+
+      const output2Element = document.getElementById("output2");
+      output2Element.innerText = partsDivided;
+
+      
+      
+    }
+   
+  </script>
+
+  <footer></footer>
+</html>
